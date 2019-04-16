@@ -1,2 +1,6 @@
 Lambda/detectFaceHandler
 Lambda/detectFaceHandler.zip
+prosopagnosia.exe
+debug
+.vscode/awslambda.go
+.vscode/launch.json
