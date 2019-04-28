@@ -10,7 +10,7 @@ import (
 )
 
 // uploadPhoto - This function is uploading a photo to a s3 bucket.
-func uploadPhoto(bucket string, filename string) error {
+func uploadPhoto(bucket string, filename string, key string) error {
 	// If there is a error with opening the file this will output the error.
 	file, err := os.Open(filename)
 	if err != nil {
@@ -31,7 +31,7 @@ func uploadPhoto(bucket string, filename string) error {
 	_, err = uploader.Upload(&s3manager.UploadInput{
 		Bucket: aws.String(bucket),
 
-		Key: aws.String(filename),
+		Key: aws.String(key),
 
 		Body: file,
 
